@@ -77,6 +77,14 @@ type Line struct {
 	Style consts.LineStyle
 	// Width define the line width (it cannot be greater than line height)
 	Width float64
+	// X define the x position of the line.
+	X float64
+	// Y define the y position of the line.
+	Y float64
+	// W define the width of the line.
+	W float64
+	// H define the height of the line.
+	H float64
 }
 
 // Font represents properties from a text.
