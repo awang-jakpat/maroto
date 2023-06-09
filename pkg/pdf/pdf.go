@@ -342,11 +342,32 @@ func (s *PdfMaroto) Line(spaceHeight float64, prop ...props.Line) {
 			left, top, right, _ := s.Pdf.GetMargins()
 
 			const divisorToGetHalf = 2.0
+			var (
+				x = left
+				y = s.offsetY + top + (spaceHeight / divisorToGetHalf)
+				w = width - right
+				h = s.offsetY + top + (spaceHeight / divisorToGetHalf)
+			)
+			if len(prop) > 0 {
+				if prop[0].X != 0 {
+					x = prop[0].X
+				}
+				if prop[0].Y != 0 {
+					y = prop[0].Y
+				}
+				if prop[0].W != 0 {
+					w = prop[0].W
+				}
+				if prop[0].H != 0 {
+					h = prop[0].H
+				}
+
+			}
 			cell := internal.Cell{
-				X:      left,
-				Y:      s.offsetY + top + (spaceHeight / divisorToGetHalf),
-				Width:  width - right,
-				Height: s.offsetY + top + (spaceHeight / divisorToGetHalf),
+				X:      x,
+				Y:      y,
+				Width:  w,
+				Height: h,
 			}
 
 			s.LineHelper.Draw(cell, lineProp)
