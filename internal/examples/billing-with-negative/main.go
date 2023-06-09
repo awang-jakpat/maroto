@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/johnfercher/maroto/pkg/color"
-	"github.com/johnfercher/maroto/pkg/consts"
-	"github.com/johnfercher/maroto/pkg/pdf"
-	"github.com/johnfercher/maroto/pkg/props"
+	"github.com/awang-jakpat/maroto/pkg/color"
+	"github.com/awang-jakpat/maroto/pkg/consts"
+	"github.com/awang-jakpat/maroto/pkg/pdf"
+	"github.com/awang-jakpat/maroto/pkg/props"
 )
 
 func main() {
